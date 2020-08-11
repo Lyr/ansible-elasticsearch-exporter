@@ -2,5 +2,23 @@ galaxy_info:
   role_name: elasticsearch_exporter
   description: Install elasticsearch prometheus exporter
   author: Lyr
-  galaxy_tags: ["prometheus","elasticsearch","elk","monitoring"]
+  galaxy_tags: 
+  - "prometheus"
+  - "elasticsearch"
+  - "elk"
+  - "monitoring"
+  license:
+  - "Apache"
+  min_ansible_version: 2.9.0
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  - name: Centos
+    versions:
+    - all
+  - name: RedHat
+    versions:
+    - all
+      
 dependencies: []
