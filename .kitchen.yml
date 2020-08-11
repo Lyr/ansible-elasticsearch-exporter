@@ -24,6 +24,7 @@ provisioner:
   hosts: localhost
   role_name: elasticsearch_exporter
   ansible_verbose: true
+  ansible_version: 2.9.0
   idempotency_test: true
   require_chef_for_busser: true
   require_ruby_for_busser: false
