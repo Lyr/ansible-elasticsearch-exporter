@@ -22,7 +22,7 @@ platforms:
 provisioner:
   name: ansible_playbook
   hosts: localhost
-  role_name: contentwise.elasticsearch-exporter
+  role_name: elasticsearch_exporter
   ansible_verbose: true
   idempotency_test: true
   require_chef_for_busser: true
