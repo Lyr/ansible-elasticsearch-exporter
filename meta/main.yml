@@ -1,1 +1,6 @@
+galaxy_info:
+  role_name: elasticsearch_exporter
+  description: Install elasticsearch prometheus exporter
+  author: Lyr
+  galaxy_tags: ["prometheus","elasticsearch","elk","monitoring"]
 dependencies: []
