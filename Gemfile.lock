@@ -10,7 +10,6 @@ GEM
       builder (>= 2.1.2)
     httpclient (2.8.3)
     kitchen-ansible (0.52.0)
-      test-kitchen (~> 1.16)
     kitchen-docker (2.6.0)
       test-kitchen (>= 1.0.0)
     little-plugger (1.1.4)
