@@ -27,8 +27,8 @@ provisioner:
   ansible_version: latest
   ansible_host_key_checking: false
   idempotency_test: false
-  require_chef_for_busser: true
-  require_ruby_for_busser: true
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
 
 suites:
   - name: default
