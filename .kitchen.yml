@@ -15,9 +15,9 @@ platforms:
       provision_command:
         - yum install net-tools -y
         - yum install iproute -y
-  - name: ubuntu-16.04
-    driver:
-      run_command: /sbin/init
+  # - name: ubuntu-16.04
+  #   driver:
+  #     run_command: /sbin/init
 
 provisioner:
   name: ansible_playbook
@@ -25,7 +25,8 @@ provisioner:
   role_name: elasticsearch_exporter
   ansible_verbose: true
   ansible_version: latest
-  idempotency_test: true
+  ansible_host_key_checking: false
+  idempotency_test: false
   require_chef_for_busser: true
   require_ruby_for_busser: false
 

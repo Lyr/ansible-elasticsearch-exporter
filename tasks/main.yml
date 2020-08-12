@@ -24,3 +24,9 @@
   notify: restart elasticsearch exporter
 
 - meta: flush_handlers
+
+- name: make sure Elasticsearch Exporter is started
+  service:
+    name: elasticsearch-exporter
+    state: started
+    enabled: yes
