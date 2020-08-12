@@ -26,6 +26,8 @@ provisioner:
   ansible_verbose: true
   ansible_version: latest
   idempotency_test: true
+  require_chef_for_busser: true
+  require_ruby_for_busser: false
 
 suites:
   - name: default
