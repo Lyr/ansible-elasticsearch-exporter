@@ -19,7 +19,7 @@
       - ANSIBLE_INSTALL_VERSION=2.9.12
 
     script:
-        - pipenv run molecule test
+        - pipenv run molecule test -s default
 
     services:
       - docker
