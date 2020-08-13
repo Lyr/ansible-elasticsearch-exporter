@@ -17,10 +17,9 @@
     env:
       - ANSIBLE_INSTALL_VERSION=2.8.13
       - ANSIBLE_INSTALL_VERSION=2.9.12
-    
 
     script:
-        - pipenv run molecule test --all
+        - pipenv run molecule test
 
     services:
       - docker
