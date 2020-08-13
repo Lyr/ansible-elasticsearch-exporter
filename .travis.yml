@@ -20,7 +20,7 @@
     
 
     script:
-      - make test
+        - pipenv run molecule test --all
 
     services:
       - docker
