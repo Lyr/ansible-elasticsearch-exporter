@@ -7,7 +7,7 @@ def test_exporter_running_and_enabled(host):
 
 
 def test_exporter_http(host):
-    assert host.socket("tcp://0.0.0.0:9108").is_listening
+    assert host.socket("tcp://127.0.0.1:9108").is_listening
     command = """curl -v http://localhost:9108/metrics"""
     cmd = host.run(command)
     assert '# HELP elasticsearch_cluster' in cmd.stdout
