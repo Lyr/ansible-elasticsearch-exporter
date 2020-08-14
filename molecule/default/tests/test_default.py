@@ -6,7 +6,8 @@ def test_exporter_running_and_enabled(host):
     assert exporter.is_enabled
 
 
-def test_mgmt_user_authentication(host):
-    command = """curl http://localhost:9108/ """
+def test_exporter_http(host):
+    assert host.socket("tcp://0.0.0.0:9108").is_listening
+    command = """curl -v http://localhost:9108/metrics"""
     cmd = host.run(command)
-    assert 'HTTP/1.1 200 OK' in cmd.stdout
+    assert '# HELP elasticsearch_cluster' in cmd.stdout
