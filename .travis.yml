@@ -19,7 +19,17 @@
         - ANSIBLE_INSTALL_VERSION: 2.7.18
         - ANSIBLE_INSTALL_VERSION: 2.8.14
         - ANSIBLE_INSTALL_VERSION: 2.9.12
-  
+      matrix:
+        - MOLECULE_DISTRO: centos:8
+        - MOLECULE_DISTRO: centos:9
+        - MOLECULE_DISTRO: fedora:27
+        - MOLECULE_DISTRO: fedora:28
+        - MOLECULE_DISTRO: ubuntu-upstart:trusty
+        - MOLECULE_DISTRO: ubuntu:xenial
+        - MOLECULE_DISTRO: ubuntu:bionic
+        - MOLECULE_DISTRO: debian:jessie
+        - MOLECULE_DISTRO: debian:stretch  
+
     script:
         - pipenv run  molecule test -s default
 
