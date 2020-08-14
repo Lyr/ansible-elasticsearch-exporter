@@ -15,9 +15,10 @@
         - master
     
     env:
-      - ANSIBLE_INSTALL_VERSION=2.7.18
-      - ANSIBLE_INSTALL_VERSION=2.8.14
-      - ANSIBLE_INSTALL_VERSION=2.9.12
+      jobs:
+        - ANSIBLE_INSTALL_VERSION: 2.7.18
+        - ANSIBLE_INSTALL_VERSION: 2.8.14
+        - ANSIBLE_INSTALL_VERSION: 2.9.12
       matrix:
         - MOLECULE_DISTRO: centos8
         - MOLECULE_DISTRO: centos7
