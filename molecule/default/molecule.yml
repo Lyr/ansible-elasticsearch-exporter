@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance-centos8
-    image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
+    image: docker.io/pycontribs/centos:8
     pre_build_image: true
     privileged: True
     volume_mounts:
@@ -17,3 +17,4 @@ provisioner:
   name: ansible
 verifier:
   name: testinfra
+
