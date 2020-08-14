@@ -17,4 +17,12 @@ provisioner:
   name: ansible
 verifier:
   name: testinfra
-
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - create
+    - converge
+    - idempotence
+    - lint
+    - verify
