@@ -1,37 +1,46 @@
 ---
 
-    group: stable
-    dist: xenial
+group: stable
+dist: xenial
 
-    language: python
-    python:
-      - 3.7
-    cache: pip
+language: python
+python:
+  - 3.7
+cache: pip
     
-    branches:
-      only:
-        - develop
-        - master
+branches:
+  only:
+    - develop
+    - master
     
-    env:
-      ANSIBLE_INSTALL_VERSION: 
-        - "2.7.18"
-        - "2.8.14"
-        - "2.9.12"
-      jobs:
-        # - MOLECULE_DISTRO: centos:7
-        # - MOLECULE_DISTRO: centos:8
-        # - MOLECULE_DISTRO: centos:9
-        # - MOLECULE_DISTRO: fedora:28
-        # - MOLECULE_DISTRO: ubuntu:xenial
-        # - MOLECULE_DISTRO: debian:jessie
-        - MOLECULE_DISTRO: debian:stretch
+env:
+  ANSIBLE_INSTALL_VERSION: 
+    - "2.7.18"
+    - "2.8.14"
+    - "2.9.12"
+  jobs:
+    # - MOLECULE_DISTRO: centos:7
+    # - MOLECULE_DISTRO: centos:8
+    # - MOLECULE_DISTRO: centos:9
+    # - MOLECULE_DISTRO: fedora:28
+    # - MOLECULE_DISTRO: ubuntu:xenial
+    # - MOLECULE_DISTRO: debian:jessie
+    - MOLECULE_DISTRO: debian:stretch
 
-    script:
-        - molecule test -s default
+before_install:
+  # Upgrade Docker to work with docker-py.
+  - curl https://gist.githubusercontent.com/geerlingguy/ce883ad4aec6a5f1187ef93bd338511e/raw/36612d28981d92863f839c5aefe5b7dd7193d6c6/travis-ci-docker-upgrade.sh | sudo bash
 
-    services:
-      - docker
+install:
+  # Install test dependencies.
+  - pip install molecule yamllint ansible-lint docker
+
+
+script:
+    - molecule test -s default
+
+services:
+  - docker
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
