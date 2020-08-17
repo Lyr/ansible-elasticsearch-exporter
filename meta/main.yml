@@ -3,7 +3,7 @@ galaxy_info:
   description: Install elasticsearch prometheus exporter
   travis_status_url: https://travis-ci.org/Lyr/ansible-elasticsearch-exporter.svg?branch=master
   author: Lyr
-  galaxy_tags: 
+  galaxy_tags:
   - "prometheus"
   - "elasticsearch"
   - "elk"
@@ -15,5 +15,5 @@ galaxy_info:
   - name: Debian
     versions:
     - all
-      
+
 dependencies: []
