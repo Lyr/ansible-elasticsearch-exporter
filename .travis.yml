@@ -22,12 +22,12 @@ env:
     # - MOLECULE_DISTRO: centos:7
     # - MOLECULE_DISTRO: centos:8
     # - MOLECULE_DISTRO: ubuntu1804
-    # - MOLECULE_DISTRO: centos:9
+    - MOLECULE_DISTRO: centos:9
     # - MOLECULE_DISTRO: fedora:28
     # - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
     # - MOLECULE_DISTRO: jrei/systemd-debian:8
     # - MOLECULE_DISTRO: debian:jessie
-    - MOLECULE_DISTRO: debian:buster
+    # - MOLECULE_DISTRO: debian:buster
 
 addons:
   apt:
