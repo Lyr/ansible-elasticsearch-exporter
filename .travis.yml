@@ -23,9 +23,9 @@ env:
     # - MOLECULE_DISTRO: centos:8
     # - MOLECULE_DISTRO: centos:9
     # - MOLECULE_DISTRO: fedora:28
-    # - MOLECULE_DISTRO: ubuntu:xenial
+    - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
     # - MOLECULE_DISTRO: debian:jessie
-    - MOLECULE_DISTRO: debian:stretch
+    # - MOLECULE_DISTRO: debian:stretch
 
 before_install:
   # Upgrade Docker to work with docker-py.
