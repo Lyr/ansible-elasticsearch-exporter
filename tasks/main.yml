@@ -21,7 +21,7 @@
   template:
     src: elasticsearch_exporter.service.j2
     dest: /etc/systemd/system/elasticsearch-exporter.service
-    mode: 600
+    mode: 0600
   notify: restart elasticsearch exporter
 
 - meta: flush_handlers
