@@ -19,9 +19,9 @@
         - "2.8.14"
         - "2.9.12"
       jobs:
-        - MOLECULE_DISTRO: centos:8
-        # - MOLECULE_DISTRO: centos:9
-        - MOLECULE_DISTRO: fedora:28
+        - MOLECULE_DISTRO: centos8
+        - MOLECULE_DISTRO: centos9
+        - MOLECULE_DISTRO: fedora28
         # - MOLECULE_DISTRO: ubuntu:xenial
         # - MOLECULE_DISTRO: debian:jessie
 
