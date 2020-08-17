@@ -1,6 +1,7 @@
 galaxy_info:
   role_name: elasticsearch_exporter
   description: Install elasticsearch prometheus exporter
+  travis_status_url: https://travis-ci.org/Lyr/ansible-elasticsearch-exporter.svg?branch=master
   author: Lyr
   galaxy_tags: 
   - "prometheus"
