@@ -20,7 +20,7 @@ env:
     - "2.9.12"
   jobs:
     - MOLECULE_DISTRO: centos:7
-    # - MOLECULE_DISTRO: centos:8
+    - MOLECULE_DISTRO: centos:8
     # - MOLECULE_DISTRO: ubuntu1804
     # - MOLECULE_DISTRO: fedora:28
     # - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
