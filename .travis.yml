@@ -14,13 +14,13 @@ branches:
     - master
     
 env:
-  jobs:
-    - MOLECULE_DISTRO: centos:7
-    - MOLECULE_DISTRO: centos:8
-    ANSIBLE_INSTALL_VERSION: 
-      - "2.7.18"
-      - "2.8.14"
-      - "2.9.12"
+  ANSIBLE_INSTALL_VERSION: 
+    - "2.8.13"
+    - "2.9.12"
+  jobs: 
+    MOLECULE_DISTRO: 
+      - "centos:7"
+      - "centos:8"
     # - MOLECULE_DISTRO: ubuntu1804
     # - MOLECULE_DISTRO: fedora:28
     # - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
