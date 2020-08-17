@@ -7,7 +7,7 @@ platforms:
   - name: instance-centos8
     image: ${MOLECULE_DISTRO:-centos:8}
 #    pre_build_image: true
-    privileged: True
+#    privileged: True
 #    volume_mounts:
 #      - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
     command: "/usr/sbin/init"
