@@ -16,8 +16,10 @@ branches:
 env:
 - ANSIBLE_INSTALL_VERSION=2.8.13
 - ANSIBLE_INSTALL_VERSION=2.9.12
-- MOLECULE_DISTRO= "centos:7"
-- MOLECULE_DISTRO= "centos:8"
+jobs:
+  include:
+  - MOLECULE_DISTRO= "centos:7"
+  - MOLECULE_DISTRO= "centos:8"
 
     # - MOLECULE_DISTRO: ubuntu1804
     # - MOLECULE_DISTRO: fedora:28
