@@ -11,24 +11,21 @@ Available variables with their default values are defined in [defaults/main.yml]
 
 ## Supported Platform
 
-Checkout [Test Kitchen configuration](.kitchen.yml) to see what platforms are supported and tested.
+Checkout [Test TravisCI Molecule configuration](/.travis.yml) to see what platforms are supported and tested.
 
 ## Test
 
 Install required dependencies:
 
-	bundle install
+	pip install  install ansible molecule==3.0.6 yamllint ansible-lint==4.2.0 docker==4.2.2 testinfra==5.2.2
 
 Run tests:
 
-	kitchen test
+	molecule test -s default
 
-## Example Playbook
-
-Checkout [integration tests](test/integration) directory for example playbooks.
 
 ## License
 
-Author: Luca Florio <luca.florio@contentwise.tv>
+Author: Lyr
 
 Licensed under the Apache License V2.0. See the [LICENSE file](LICENSE) for details.
