@@ -20,8 +20,8 @@ env:
   ANSIBLE_INSTALL_VERSION=2.8.13
 - MOLECULE_DISTRO=centos:7
   ANSIBLE_INSTALL_VERSION=2.9.12
-- MOLECULE_DISTRO=centos:8
-- MOLECULE_DISTRO=fedora:28
+# - MOLECULE_DISTRO=centos:8
+# - MOLECULE_DISTRO=fedora:28
     # - MOLECULE_DISTRO: ubuntu1804
     # - MOLECULE_DISTRO: fedora:28
     # - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
@@ -34,7 +34,7 @@ addons:
     packages:
       - docker-ce
 install:
-  - pip install ansible==${ANSIBLE_INSTALL_VERSION} molecule==3.0.6 yamllint ansible-lint==4.2.0 docker==4.2.2
+  - pip install ansible==${ANSIBLE_INSTALL_VERSION} molecule==3.0.6 yamllint ansible-lint==4.2.0 docker==4.2.2 testinfra==5.2.2
 
 script:
     - molecule test -s default
