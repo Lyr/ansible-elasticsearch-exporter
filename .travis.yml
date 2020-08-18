@@ -33,6 +33,8 @@ addons:
   apt:
     packages:
       - docker-ce
+install:
+  - pip install ansible==${ANSIBLE_INSTALL_VERSION}
 
 script:
     - molecule test -s default
