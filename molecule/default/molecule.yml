@@ -10,7 +10,7 @@ platforms:
     privileged: True
     volume_mounts:
       - "/sys/fs/cgroup:/sys/fs/cgroup:rw"
-    command: "{CMD:-/usr/sbin/init}"
+    command: "${CMD:-/usr/sbin/init}"
     environment: { container: docker }
 
 provisioner:
