@@ -25,7 +25,7 @@ env:
   ANSIBLE_INSTALL_VERSION=2.9.12
 - MOLECULE_DISTRO=debian:jessie
   ANSIBLE_INSTALL_VERSION=2.8.13
-  CM="apt-get install -y init&&/usr/sbin/init"
+  CMD="apt-get install -y init&&/usr/sbin/init"
 - MOLECULE_DISTRO=debian:jessie
   ANSIBLE_INSTALL_VERSION=2.9.12
 - MOLECULE_DISTRO=debian:buster
@@ -34,16 +34,16 @@ env:
   ANSIBLE_INSTALL_VERSION=2.9.12
 - MOLECULE_DISTRO=ubuntu:focal
   ANSIBLE_INSTALL_VERSION=2.8.13
-  CM="/sbin/init"
+  CMD="/sbin/init"
 - MOLECULE_DISTRO=ubuntu:focal
   ANSIBLE_INSTALL_VERSION=2.9.12
-  CM="/sbin/init"
+  CMD="/sbin/init"
 - MOLECULE_DISTRO=ubuntu:bionic
   ANSIBLE_INSTALL_VERSION=2.8.13
-  CM="/sbin/init"
+  CMD="/sbin/init"
 - MOLECULE_DISTRO=ubuntu:bionic
   ANSIBLE_INSTALL_VERSION=2.9.12
-  CM="/sbin/init"
+  CMD="/sbin/init"
   
 addons:
   apt:
