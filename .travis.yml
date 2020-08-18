@@ -18,6 +18,7 @@ env:
 
 - MOLECULE_DISTRO=debian:jessie
   ANSIBLE_INSTALL_VERSION=2.8.13
+  CM=apt-get install -y init&&/usr/sbin/init
 - MOLECULE_DISTRO=debian:jessie
   ANSIBLE_INSTALL_VERSION=2.9.12
 - MOLECULE_DISTRO=debian:buster
