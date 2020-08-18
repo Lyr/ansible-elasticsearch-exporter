@@ -4,7 +4,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: instance-centos8
+  - name: instance
     image: "${MOLECULE_DISTRO:-centos:8}"
     # pre_build_image: true
     privileged: True
@@ -15,14 +15,22 @@ platforms:
 
 provisioner:
   name: ansible
+  log: True
 verifier:
   name: testinfra
 scenario:
   name: default
   test_sequence:
-    - destroy
-    - create
-    - converge
-    - idempotence
-    - lint
-    - verify
+    ─ dependency
+    ─ lint
+    ─ cleanup
+    ─ destroy
+    ─ syntax
+    ─ create
+    ─ prepare
+    ─ converge
+    ─ idempotence
+    ─ side_effect
+    ─ verify
+    ─ cleanup
+    ─ destroy
