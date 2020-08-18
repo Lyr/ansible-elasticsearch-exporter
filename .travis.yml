@@ -13,13 +13,13 @@ branches:
     - develop
     - master
 
-MOLECULE_DISTRO:
-- "centos:7"
-- "centos:8"
 env:
 - ANSIBLE_INSTALL_VERSION=2.8.13
 - ANSIBLE_INSTALL_VERSION=2.9.12
-
+  matrix:
+    MOLECULE_DISTRO:
+    - "centos:7"
+    - "centos:8"
     # - MOLECULE_DISTRO: ubuntu1804
     # - MOLECULE_DISTRO: fedora:28
     # - MOLECULE_DISTRO: jrei/systemd-ubuntu:20.04
