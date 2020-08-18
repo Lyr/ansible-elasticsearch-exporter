@@ -34,7 +34,7 @@ addons:
     packages:
       - docker-ce
 install:
-  - pip install ansible==${ANSIBLE_INSTALL_VERSION} molecule yamllint ansible-lint docker
+  - pip install ansible==${ANSIBLE_INSTALL_VERSION} molecule yamllint ansible-lint
 
 script:
     - molecule test -s default
