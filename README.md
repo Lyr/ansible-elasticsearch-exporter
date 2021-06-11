@@ -3,7 +3,7 @@ Ansible Elasticsearch Exporter Role
 
 [![Build Status](https://travis-ci.org/Lyr/ansible-elasticsearch-exporter.svg?branch=master)](https://travis-ci.org/Lyr/ansible-elasticsearch-exporter)
 
-An Ansible Role that installs [Prometheus Elasticsearch Exporter](https://github.com/justwatchcom/elasticsearch_exporter) on Linux (default versions 1.1.0).
+An Ansible Role that installs [Prometheus Elasticsearch Exporter](https://github.com/justwatchcom/elasticsearch_exporter) on Linux (default versions 1.2.0).
 
 ## Role Variables
 
